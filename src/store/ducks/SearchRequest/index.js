@@ -4,6 +4,7 @@ const initialState = {
   isFetching: false,
   videos: [],
   nextPageToken: "",
+  lastSearchTerm: "",
   error: "",
 };
 
@@ -17,6 +18,7 @@ export default function reducer(state = initialState, action) {
         isFetching: false,
         videos: action.resp,
         nextPageToken: action.nextPageToken,
+        lastSearchTerm: action.term,
       };
     case TasksTypes.RECEIVED_PAGE:
       return {

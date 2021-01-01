@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -17,3 +18,8 @@ export const Title = styled.span`
 `;
 export const Description = styled.span``;
 export const Channel = styled.span``;
+
+export const PlayerLink = styled(Link)`
+  text-decoration:none;
+  color:unset;
+`;

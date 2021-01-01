@@ -2,8 +2,16 @@ import React from "react";
 import { Container } from "./style";
 import { connect } from "react-redux";
 import Video from "../../components/Video";
+import handleAsyncSearch from "../../store/ducks/SearchRequest/actions";
 
-function Home({ videos, error, isFetching }) {
+function Home({
+  videos,
+  error,
+  isFetching,
+  handleAsyncSearch,
+  lastSearchTerm,
+  nextPageToken,
+}) {
   if (error) {
     return <span>Error: {error}</span>;
   }
@@ -15,6 +23,7 @@ function Home({ videos, error, isFetching }) {
     <Container>
       {videos.map(
         ({
+          id:{videoId},
           snippet: {
             title,
             description,
@@ -24,18 +33,26 @@ function Home({ videos, error, isFetching }) {
             channelTitle,
           },
         }) => (
-          <Video data={{ thumb: url, title, description, channelTitle }} />
+          <Video data={{ thumb: url, title, description, channelTitle, videoId }} />
         )
       )}
+      <button onClick={() => handleAsyncSearch(lastSearchTerm, nextPageToken)}>
+        Add Search
+      </button>
       {isFetching && <span>Loading...</span>}
     </Container>
   );
 }
 
-const mapStateToProps = ({ SearchRequest: { videos, error, isFetching } }) => ({
+const mapStateToProps = ({
+  SearchRequest: { videos, error, isFetching, lastSearchTerm, nextPageToken },
+}) => ({
   videos,
   error,
   isFetching,
+  lastSearchTerm,
+  nextPageToken
 });
+const mapDispatchToProps = { handleAsyncSearch };
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

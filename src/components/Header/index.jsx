@@ -1,32 +1,33 @@
 import React, { useState } from "react";
 import { Container } from "./style";
+import { Link, Route } from "react-router-dom";
 
 import { connect } from "react-redux";
 import handleAsyncSearch from "../../store/ducks/SearchRequest/actions";
 
-function Header({ handleAsyncSearch, nextPageToken }) {
+function Header({ handleAsyncSearch }) {
   const [key, setKey] = useState("");
-  const [lastSearch, setLastSearch] = useState("");
   return (
     <Container>
+      <Link to="/">Home</Link>
       <input onChange={(e) => setKey(e.target.value)}></input>
-      <button
-        onClick={() => {
-          handleAsyncSearch(key);
-          setLastSearch(key);
-        }}
-      >
-        Search
-      </button>
-      <button onClick={() => handleAsyncSearch(lastSearch, nextPageToken)}>
-        Add Search
-      </button>
-    </Container>    
+
+      <Route
+        render={({ history }) => (
+          <button
+            type="button"
+            onClick={() => {
+              history.push("/");
+              handleAsyncSearch(key);
+            }}
+          >
+            Search
+          </button>
+        )}
+      />
+    </Container>
   );
 }
 
-const mapStateToProps = ({ SearchRequest: { nextPageToken } }) => ({
-  nextPageToken,
-});
 const mapDispatchToProps = { handleAsyncSearch };
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(null, mapDispatchToProps)(Header);
