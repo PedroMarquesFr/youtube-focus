@@ -14,13 +14,14 @@ export default function reducer(state = initialState, action) {
     case TasksTypes.RECEIVED_DATA:
       return {
         ...state,
-        videos: action.resp,
         isFetching: false,
+        videos: action.resp,
         nextPageToken: action.nextPageToken,
       };
     case TasksTypes.RECEIVED_PAGE:
       return {
         ...state,
+        isFetching: false,
         videos: [...state.videos, ...action.resp],
         nextPageToken: action.nextPageToken,
       };
