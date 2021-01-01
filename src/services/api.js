@@ -1,4 +1,4 @@
-const API_KEY = 'AIzaSyChjTtpMBc2ZI51w676lb0nidadOouIhMU';
+import API_KEY from'./api_key';
 
 export const getRecomendedVideosById = async (id) => {
   try {
