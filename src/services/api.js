@@ -20,8 +20,8 @@ export const getSearchByString = async (search, nextPage = false) => {
   try {
     const req = await fetch(
       nextPage
-        ? `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${search}&type=video&key=${API_KEY}&pageToken=${nextPage}`
-        : `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${search}&type=video&key=${API_KEY}`
+        ? `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=${search}&type=video&key=${API_KEY}&pageToken=${nextPage}`
+        : `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=${search}&type=video&key=${API_KEY}`
     );
     const json = await req.json();
     if (json.error) {

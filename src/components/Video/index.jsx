@@ -6,18 +6,21 @@ import {
   Title,
   // Description,
   Channel,
+  PlayerLink
 } from "./style";
 
 export default function Video({
-  data: { thumb, title, description, channelTitle },
+  data: { thumb, title, description, channelTitle, videoId },
 }) {
   return (
     <Container>
-      <Thumb src={thumb} alt="thumb" />
-      <InfoWrapper>
-        <Title>{title}</Title>
-        <Channel>{channelTitle}</Channel>
-      </InfoWrapper>
+      <PlayerLink to={`/player/${videoId}`}>
+        <Thumb src={thumb} alt="thumb" />
+        <InfoWrapper>
+          <Title>{title}</Title>
+          <Channel>{channelTitle}</Channel>
+        </InfoWrapper>
+      </PlayerLink>
     </Container>
   );
 }
