@@ -1,7 +1,9 @@
+const API_KEY = 'AIzaSyChjTtpMBc2ZI51w676lb0nidadOouIhMU';
+
 export const getRecomendedVideosById = async (id) => {
   try {
     const req = await fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&relatedToVideoId=${id}&type=video&key=AIzaSyChjTtpMBc2ZI51w676lb0nidadOouIhMU`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&relatedToVideoId=${id}&type=video&key=${API_KEY}`
     );
     const json = await req.json();
     console.log(json);
@@ -18,8 +20,8 @@ export const getSearchByString = async (search, nextPage = false) => {
   try {
     const req = await fetch(
       nextPage
-        ? `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${search}&type=video&key=AIzaSyChjTtpMBc2ZI51w676lb0nidadOouIhMU&pageToken=${nextPage}`
-        : `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${search}&type=video&key=AIzaSyChjTtpMBc2ZI51w676lb0nidadOouIhMU`
+        ? `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${search}&type=video&key=${API_KEY}&pageToken=${nextPage}`
+        : `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${search}&type=video&key=${API_KEY}`
     );
     const json = await req.json();
     if (json.error) {
