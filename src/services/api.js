@@ -1,4 +1,4 @@
-import API_KEY from'./api_key';
+import API_KEY from "./api_key";
 
 export const getRecomendedVideosById = async (id) => {
   try {
@@ -6,12 +6,11 @@ export const getRecomendedVideosById = async (id) => {
       `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&relatedToVideoId=${id}&type=video&key=${API_KEY}`
     );
     const json = await req.json();
-    console.log(json);
+    if (json.error) {
+      throw json.error;
+    }
     return json;
   } catch (error) {
-    console.log(
-      `(From async/await getRecomendedVideosById) Error: ${error.message}, ${error.code}`
-    );
     return error;
   }
 };
