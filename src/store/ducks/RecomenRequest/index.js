@@ -3,7 +3,7 @@ console.log(TasksTypes.REQUESTING_DATA);
 const initialState = {
   isFetching: false,
   videos: [],
-  nextPageToken: "",
+
   error: "",
   lastId:"",
 };
@@ -16,8 +16,7 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         isFetching: false,
-        videos: [...state.videos, ...action.resp],
-        nextPageToken: action.nextPageToken,
+        videos: [...action.resp],//...state.videos,
         lastId: action.lastId,
       };
     case TasksTypes.FAILED_REQUEST:

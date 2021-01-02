@@ -12,18 +12,17 @@ function Home({
   lastSearchTerm,
   nextPageToken,
 }) {
-  if (error) {
-    return <span>Error: {error}</span>;
-  }
   if (isFetching && videos.length === 0) {
     return <span>Loading...</span>;
   }
-
+  if (error) {
+    return <span>Error: {error}</span>;
+  }
   return (
     <Container>
       {videos.map(
         ({
-          id:{videoId},
+          id: { videoId },
           snippet: {
             title,
             description,
@@ -33,7 +32,9 @@ function Home({
             channelTitle,
           },
         }) => (
-          <Video data={{ thumb: url, title, description, channelTitle, videoId }} />
+          <Video
+            data={{ thumb: url, title, description, channelTitle, videoId }}
+          />
         )
       )}
       <button onClick={() => handleAsyncSearch(lastSearchTerm, nextPageToken)}>
@@ -51,7 +52,7 @@ const mapStateToProps = ({
   error,
   isFetching,
   lastSearchTerm,
-  nextPageToken
+  nextPageToken,
 });
 const mapDispatchToProps = { handleAsyncSearch };
 

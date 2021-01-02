@@ -4,4 +4,5 @@ export const Container = styled.div`
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  width:100vw;
 `;

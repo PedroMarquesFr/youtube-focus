@@ -3,25 +3,39 @@ import { Container } from "./style";
 
 import { connect } from "react-redux";
 import handleAsyncNewPage from "../../store/ducks/RecomenRequest/actions";
+import VideoWrapper from "../VideoWrapper";
 
 function Recommends({
   id,
   handleAsyncNewPage,
   videos,
   isFetching,
-  nextPageToken,
   lastId,
   error,
 }) {
   const handleFetchPage = () => {
-    return id === lastId ? false : handleAsyncNewPage(id, nextPageToken);
+    return handleAsyncNewPage(id);
   };
   useEffect(() => {
-    console.log("montou");
-    handleFetchPage();
-  }, []);
+    console.log(id,lastId)
+    if(id!==lastId){
+        handleFetchPage(); 
+    }
+    
+  }, [id]);
 
-  return <Container>Recommends {id}</Container>;
+  if (error) {
+    return <span>Error: {error}</span>;
+  }
+  if (isFetching && videos.length === 0) {
+    return <span>Loading...</span>;
+  }
+  return (
+    <Container>
+      Recommends for {id}
+      <VideoWrapper videos={videos} />
+    </Container>
+  );
 }
 
 const mapDispatchToProps = { handleAsyncNewPage };
