@@ -14,8 +14,8 @@ import { useParams } from "react-router-dom";
 
 
   const opts = {
-    height: winSize / 2, //720
-    width: (winSize / 2) * 1.777777777778, //1280
+    height: winSize / 2.3, //720
+    width: (winSize / 2.3) * 1.777777777778, //1280
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
