@@ -7,7 +7,6 @@ export const Container = styled.div`
 `;
 export const Thumb = styled.img`
   width: 100%;
-
 `;
 export const InfoWrapper = styled.div`
   display: flex;
@@ -17,9 +16,11 @@ export const Title = styled.span`
   font-weight: 500;
 `;
 export const Description = styled.span``;
-export const Channel = styled.span``;
+export const Channel = styled.span`
+  opacity: 0.7;
+`;
 
 export const PlayerLink = styled(Link)`
-  text-decoration:none;
-  color:unset;
+  text-decoration: none;
+  color: unset;
 `;

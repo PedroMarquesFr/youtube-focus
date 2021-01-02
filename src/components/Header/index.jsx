@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Container } from "./style";
+import { Container, Input, SearchButton, InputWrapper } from "./style";
+import shoe1 from "../../styles/images/YTF-Short-logo.svg";
 import { Link, Route } from "react-router-dom";
 
 import { connect } from "react-redux";
@@ -9,20 +10,24 @@ function Header({ handleAsyncSearch }) {
   const [key, setKey] = useState("");
   return (
     <Container>
-      <Link to="/">Home</Link>
-      <input onChange={(e) => setKey(e.target.value)}></input>
+      <Link to="/">
+        <img src={shoe1} alt="logo" width="130"/>
+      </Link>
 
       <Route
         render={({ history }) => (
-          <button
-            type="button"
-            onClick={() => {
-              history.push("/");
-              handleAsyncSearch(key);
-            }}
-          >
-            Search
-          </button>
+          <InputWrapper>
+            <Input onChange={(e) => setKey(e.target.value)}></Input>
+            <SearchButton
+              type="button"
+              onClick={() => {
+                history.push("/");
+                handleAsyncSearch(key);
+              }}
+            >
+              Search
+            </SearchButton>
+          </InputWrapper>
         )}
       />
     </Container>

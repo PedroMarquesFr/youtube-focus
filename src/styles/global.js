@@ -18,6 +18,10 @@ export default createGlobalStyle`
       }
     }
     height:100vh;
+    span,p,h1{
+      color:${props=>props.theme.colors.text}
+    }
+    background-color:${props=>props.theme.colors.background}
   }
 `;
 // color:${(props) => props.theme.colors.text};  background:${(props) => props.theme.colors.background};
