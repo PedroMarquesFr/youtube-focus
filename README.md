@@ -18,6 +18,7 @@
 - [Instalation](#Instalation)
 - [How to use](#How)
 - [Tecnologies](#Tecnologies)
+- [Problems](#Problems)
 <!--te-->
 
 <h2 href="#About">About</h2>
@@ -58,3 +59,7 @@
 - Youtube DATA API v3
 
 <!--te-->
+
+<h2 href="#Problems">Problems</h2>
+<p>As it is based o google API queries system that is limited to a certain amount of requisition per day I dont know how to scale it, like, create a real site is just impossible, each requisiton is like 100 Queries<p>
+<img src="apiGoogle.png"/>
