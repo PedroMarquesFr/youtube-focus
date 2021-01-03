@@ -64,5 +64,6 @@
 <!--te-->
 
 <h2 href="#Problems">Problems</h2>
-<p>As it is based o google API queries system that is limited to a certain amount of requisition per day I dont know how to scale it, like, create a real site is just impossible, each requisiton is like 100 Queries<p>
+
+<p>As it is based on  Google's API queries system that is limited to a certain amount of requisition per day I don't know how to scale it, like, create a real site is just impossible, each requisition is something like 100 Queries and you have only 10k. I still dont know how to solve it<p>
 <img src="apiGoogle.png"/>
