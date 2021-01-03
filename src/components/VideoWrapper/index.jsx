@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import Video from "../Video";
 import { Container } from "./style";
 
-export default function VideoWrapper({ videos }) {
+function VideoWrapper({ videos }) {
   const filteredVideos = videos.filter(video=>video.snippet !== undefined)
   return (
     <Container>
@@ -31,3 +31,6 @@ export default function VideoWrapper({ videos }) {
     </Container>
   );
 }
+
+
+export default memo(VideoWrapper);
