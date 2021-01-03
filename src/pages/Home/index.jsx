@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Button } from "./style";
+import { Container, Button, LogoSvg, Ornament, Span } from "./style";
+import Logo from "../../styles/images/YTF-Long-logo.svg";
 import { connect } from "react-redux";
 import VideoWrapper from "../../components/VideoWrapper";
 import handleAsyncSearch from "../../store/ducks/SearchRequest/actions";
@@ -12,6 +13,16 @@ function Home({
   lastSearchTerm,
   nextPageToken,
 }) {
+  if (!isFetching && videos.length === 0) {
+    return (
+      <Container>
+        <LogoSvg src={Logo} />
+        <Ornament />
+        <Span>Recommendations only related to the main content</Span>
+        <Span>No distractions.</Span>
+      </Container>
+    );
+  }
   if (isFetching && videos.length === 0) {
     return <span>Loading...</span>;
   }
