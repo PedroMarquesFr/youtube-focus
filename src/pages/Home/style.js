@@ -4,8 +4,31 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
 
-  margin-top: 110px;
+  margin-top: 140px;
+`;
+export const LogoSvg = styled.img`
+  height: 280px;
+  margin-bottom:40px;
+`;
+
+export const Ornament = styled.div`
+  position: absolute;
+  z-index: -1;
+  top: -670px;
+
+  height: 1500px;
+  width: 1500px;
+  border-radius: 50%;
+  background-color: ${(props) => props.theme.colors.background};
+  border: 100px solid ${(props) => props.theme.colors.primary};
+`;
+
+export const Span = styled.span`
+  margin: 10px 0;
+  font-size:26px;
+
 `;
 
 export const Button = styled.button`

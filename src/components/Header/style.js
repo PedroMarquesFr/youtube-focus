@@ -5,14 +5,15 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   padding: 20px;
-  /* background-color:${(props) => props.theme.colors.background}; */
   border-bottom: 1px solid #d8d8d8;
   position: fixed;
   top: 0;
   right: 0;
   width:100vw;
-  /* filter: blur(8px); */
   background-color:${(props) => props.theme.colors.background};
+  
+  /* background-color:rgba(240, 240, 240, 0.85);
+  backdrop-filter: blur(100px); */
   z-index:3;
 `;
 

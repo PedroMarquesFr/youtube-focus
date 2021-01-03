@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top:20px;
 `;
 export const Thumb = styled.img`
   width: 100%;
