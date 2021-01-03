@@ -43,13 +43,13 @@
   <!--te-->
 
 <h2 href="#How">How to use</h2>
-<p  width="20px" align="center"><img src="homeInit.png" height="250" /></p>
+<p  width="20px" align="center"><img src="homeInit.png" height="270" /></p>
 <p  width="20px" align="center">
-    <img src="searchPage.png" height="250" />
+    <img src="searchPage.png" height="270" />
     <p >is just like Youtube but simpler</p>
 </p>
 <p align="center">    
-    <img src="playerPage.png" height="250" />
+    <img src="playerPage.png" height="270" />
     <p >when clicking on a video you are going to be redirected to the player page<p>
 </p>
 
