@@ -13,6 +13,9 @@ function Home({
   lastSearchTerm,
   nextPageToken,
 }) {
+  if (error) {
+    return <Container>Error: {error}</Container>;
+  }
   if (!isFetching && videos.length === 0) {
     return (
       <Container>
@@ -24,11 +27,9 @@ function Home({
     );
   }
   if (isFetching && videos.length === 0) {
-    return <span>Loading...</span>;
+    return <Container>Loading...</Container>;
   }
-  if (error) {
-    return <span>Error: {error}</span>;
-  }
+
   return (
     <Container>
       <VideoWrapper videos={videos} />

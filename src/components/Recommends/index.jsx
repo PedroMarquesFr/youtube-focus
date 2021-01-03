@@ -32,7 +32,7 @@ function Recommends({
   }
   return (
     <Container>
-      Recommedations for this video
+      Video Recommedations
       <VideoWrapper videos={videos} />
     </Container>
   );

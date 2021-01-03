@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+<p align="center">
+<img src="src/styles/images/YTF-Long-logo.svg" align="center"/>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2 align="center">Welcome to Youtube Focus repository</h2>
+<h4 align="center"> 
+	🚧  In developement...  🚧
+</h4>
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+<p >Study or do whatever you want on youtube without distractive recommendations 🚀</p>
 
-### `yarn start`
+<!--ts-->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [About](#sobre)
+- [Features](#tabela-de-conteudo)
+- [Instalation](#instalacao)
+- [How to use](#como-usar)
+- [Tecnologies](#tecnologias)
+<!--te-->
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<h2 href="#sobre">About</h2>
+<p>This project was inspired by a personal need. When i was in high school or university and had to study some content in video class youtube always recommended some unrelated videos which made it very difficult to concentrate. YT Focus removes the smart YouTube recommendation based on your tastes with anonymous queries. :D <p>
 
-### `yarn test`
+<h2 href="#tabela-de-conteudo">Features</h2>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [x] Search
+- [x] List Videos, paging
+- [x] Recommendation component based on main video
 
-### `yarn build`
+<h2 href="#instalacao">Instalation</h2>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!--ts-->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- After clone Run yarn on terminal to install dependencies
+- Config Google API key
+  - As google API is private and has limited Queries you will have use yours
+  - [How to create youtube API Key](https://www.youtube.com/watch?v=3jZ5vnv-LZc)
+  - With your API key go to src/services/`api_key_example.js` paste the key into the const API_KEY and rename the file to `api_key.js`
+  - If your api key is correct and still having queries the project will run :D
+<!--te-->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h2 href="#como-usar">How to use</h2>
+<p align="center">
+    <img src="searchPage.png" align="center"/>
+    <p>is just like Youtube but simpler</p>
+    <img src="playerPage.png" align="center"/>
+    <p>when clicking on a video you are going to be redirected to the player page<p>
+</p>
 
-### `yarn eject`
+<h2 href="#tecnologias">Tecnologies</h2>
+<!--ts-->
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- React
+- Redux
+- Styled Components
+- Youtube DATA API v3
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!--te-->
