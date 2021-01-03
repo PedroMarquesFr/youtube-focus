@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+<p align="center">
+<img src="src/styles/images/YTF-Long-logo.svg" align="center"/>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2 align="center">Welcome to Youtube Focus repository</h2>
+
+## Descrição do Projeto
+
+<p >Study or do whatever you want on youtube without distractive recommendations 🚀</p>
 
 ## Available Scripts
 
