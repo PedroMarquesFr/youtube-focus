@@ -17,7 +17,7 @@ export const Title = styled.span`
 `;
 export const Description = styled.span``;
 export const Channel = styled.span`
-  opacity: 0.7;
+  opacity: 0.75;
 `;
 
 export const PlayerLink = styled(Link)`

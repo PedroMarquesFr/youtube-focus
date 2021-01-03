@@ -6,6 +6,14 @@ export const Container = styled.div`
   justify-content: space-around;
   padding: 20px;
   /* background-color:${(props) => props.theme.colors.background}; */
+  border-bottom: 1px solid #d8d8d8;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width:100vw;
+  /* filter: blur(8px); */
+  background-color:${(props) => props.theme.colors.background};
+  z-index:3;
 `;
 
 export const InputWrapper = styled.div`
@@ -16,23 +24,30 @@ export const InputWrapper = styled.div`
 `;
 
 export const Input = styled.input`
-  padding: 12.2px;
+  padding: 8.2px;
   background-color: white;
   width: 30vw;
-  border: 1px solid #D8D8D8;
+  border: 1px solid #d8d8d8;
   border-right: none;
   border-top-left-radius: 10px;
-  border-bottom-left-radius:10px;
+  border-bottom-left-radius: 10px;
+  color: ${(props) => props.theme.colors.text};
+  font-size: 20px;
 `;
 export const SearchButton = styled.button`
   padding: 10px;
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: #3367D6;
   color: white;
   font-size: 17px;
   font-weight: 600;
   border: none;
-  border: 1px solid #a00404;
+  border: 1px solid #1E53C4;
   border-left: none;
   border-top-right-radius: 10px;
-  border-bottom-right-radius:10px;
+  border-bottom-right-radius: 10px;
+
+  transition:background .3s;
+  &:hover{
+    background-color: #1E53C4;
+  }
 `;

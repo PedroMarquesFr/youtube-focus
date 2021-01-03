@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "./style";
 import { connect } from "react-redux";
-import Video from "../../components/Video";
+import VideoWrapper from "../../components/VideoWrapper";
 import handleAsyncSearch from "../../store/ducks/SearchRequest/actions";
 
 function Home({
@@ -20,25 +20,9 @@ function Home({
   }
   return (
     <Container>
-      {videos.map(
-        ({
-          id: { videoId },
-          snippet: {
-            title,
-            description,
-            thumbnails: {
-              medium: { url },
-            },
-            channelTitle,
-          },
-        }) => (
-          <Video
-            data={{ thumb: url, title, description, channelTitle, videoId }}
-          />
-        )
-      )}
+      <VideoWrapper videos={videos} />
       <button onClick={() => handleAsyncSearch(lastSearchTerm, nextPageToken)}>
-        Add Search
+        More Videos
       </button>
       {isFetching && <span>Loading...</span>}
     </Container>
