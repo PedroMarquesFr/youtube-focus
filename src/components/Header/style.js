@@ -10,10 +10,10 @@ export const Container = styled.div`
   top: 0;
   right: 0;
   width:100vw;
-  background-color:${(props) => props.theme.colors.background};
+  /* background-color:${(props) => props.theme.colors.background}; */
   
-  /* background-color:rgba(240, 240, 240, 0.85);
-  backdrop-filter: blur(100px); */
+  background-color:rgba(240, 240, 240, 0.82);
+  backdrop-filter: blur(100px);
   z-index:3;
 `;
 
