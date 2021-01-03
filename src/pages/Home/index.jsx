@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "./style";
+import { Container, Button } from "./style";
 import { connect } from "react-redux";
 import VideoWrapper from "../../components/VideoWrapper";
 import handleAsyncSearch from "../../store/ducks/SearchRequest/actions";
@@ -21,9 +21,9 @@ function Home({
   return (
     <Container>
       <VideoWrapper videos={videos} />
-      <button onClick={() => handleAsyncSearch(lastSearchTerm, nextPageToken)}>
+      <Button onClick={() => handleAsyncSearch(lastSearchTerm, nextPageToken)}>
         More Videos
-      </button>
+      </Button>
       {isFetching && <span>Loading...</span>}
     </Container>
   );
