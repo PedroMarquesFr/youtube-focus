@@ -40,14 +40,17 @@
   - [How to create youtube API Key](https://www.youtube.com/watch?v=3jZ5vnv-LZc)
   - With your API key go to `src/services/api_key_example.js` paste the key into the const API_KEY and rename the file to `api_key.js`
   - If your api key is correct and still having queries the project will run :D
-<!--te-->
+  <!--te-->
 
 <h2 href="#How">How to use</h2>
-<p  width="20px">
-    <img src="searchPage.png" height="250" />
-    <p>is just like Youtube but simpler</p>
-    <img src="playerPage.png" height="250" />
-    <p>when clicking on a video you are going to be redirected to the player page<p>
+<p  width="20px" align="center"><img src="homeInit.png" height="270" /></p>
+<p  width="20px" align="center">
+    <img src="searchPage.png" height="270" />
+    <p >is just like Youtube but simpler</p>
+</p>
+<p align="center">    
+    <img src="playerPage.png" height="270" />
+    <p >when clicking on a video you are going to be redirected to the player page<p>
 </p>
 
 <h2 href="#Tecnologies">Tecnologies</h2>
@@ -61,5 +64,6 @@
 <!--te-->
 
 <h2 href="#Problems">Problems</h2>
+
 <p>As it is based on  Google's API queries system that is limited to a certain amount of requisition per day I don't know how to scale it, like, create a real site is just impossible, each requisition is something like 100 Queries and you have only 10k. I still dont know how to solve it<p>
 <img src="apiGoogle.png"/>
