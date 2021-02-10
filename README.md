@@ -36,7 +36,7 @@
 
 - After clone Run yarn on terminal to install dependencies
 - Config Google API key
-  - As google API is private and has limited Queries you will have use yours
+  - As google API is private and has limited Queries you will have to use yours
   - [How to create youtube API Key](https://www.youtube.com/watch?v=3jZ5vnv-LZc)
   - With your API key go to `src/services/api_key_example.js` paste the key into the const API_KEY and rename the file to `api_key.js`
   - If your api key is correct and still having queries the project will run :D
